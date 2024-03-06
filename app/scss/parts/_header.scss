@@ -6,5 +6,10 @@
 .logo {
   width: 100%;
   max-width: 132px;
-  
+}
+
+@media (max-width: 1400px) {
+  .header-top__logo {
+    max-width: 88px;
+  }
 }

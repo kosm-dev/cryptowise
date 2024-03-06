@@ -41,8 +41,9 @@
   align-items: center;
   &__icon {
     margin-bottom: 20px;
+  }
+  &__icon img {
     width: 60px;
-    height: 60px;
   }
   &__text {
     @extend %kumbh-300;
@@ -98,4 +99,77 @@
 
 .top-slider .swiper-pagination-bullet-active {
   background: #f8c541;
+}
+
+@media (max-width: 1400px) {
+  .top__img {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .top__img {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .top__title {
+    max-width: 540px;
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .top {
+    margin-top: 50px;
+  }
+  .top__title {
+    margin-bottom: 40px;
+  }
+  .top-text {
+    margin-top: 0;
+  }
+
+  .top__items {
+    flex-direction: column;
+    gap: 20px 0;
+  }
+
+  .top-features {
+    max-width: none;
+    flex-direction: row;
+    align-items: start;
+  }
+  .top-features__icon {
+    margin-bottom: 0;
+    margin-right: 15px;
+  }
+
+  .top-features__icon img {
+    width: 40px;
+  }
+
+  .top-features__text {
+    font-size: 16px;
+    text-align: start;
+    padding: 0;
+  }
+
+  .top-text {
+    font-size: 16px;
+    gap: 25px 0;
+  }
+
+  .top-slider .swiper-pagination {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: static;
+  }
+}
+
+@media (max-width: 576px) {
+  .top-features__icon img {
+    width: 100%;
+  }
 }

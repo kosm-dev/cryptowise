@@ -22,7 +22,7 @@
     padding-right: 15px;
   }
   &__menu-link:after {
-    content: '|';
+    content: "|";
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -30,5 +30,26 @@
   }
   &__menu-item:last-child &__menu-link:after {
     display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+  .footer__inner {
+    font-size: 8px;
+  }
+  .footer__menu {
+    margin-bottom: 10px;
+  }
+  .footer__menu-list {
+    gap: 0 10px;
+  }
+  .footer__menu-link {
+    position: relative;
+    color: inherit;
+    padding-right: 10px;
   }
 }
