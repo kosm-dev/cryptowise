@@ -124,6 +124,11 @@ body {
   text-transform: uppercase;
   text-align: center;
   color: #02081e;
+  border: 0;
+  cursor: pointer;
+}
+
+.btn--special {
 }
 
 @media (max-width: 768px) {

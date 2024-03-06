@@ -1,0 +1,32 @@
+.authorization {
+  margin-top: 100px;
+  &__inner {
+    width: 100%;
+    max-width: 548px;
+    margin: 0 auto;
+  }
+  &__title {
+    margin-bottom: 50px;
+    @extend %kumbh-300;
+    font-size: 48px;
+    text-align: center;
+    color: #fff;
+  }
+  &__form {
+  }
+}
+
+.form-auth {
+  &__btns {
+  }
+  &__btn {
+  }
+  &__text {
+  }
+}
+.auth-item {
+  &__info {
+  }
+  &__link {
+  }
+}
