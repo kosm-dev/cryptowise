@@ -38,11 +38,19 @@ body {
   flex: 0 0 auto;
 }
 
-.container {
-  max-width: 1180px;
+// .container {
+//   max-width: 1180px;
+//   width: 100%;
+//   margin: 0 auto;
+//   padding: 0 15px;
+// }
+
+
+.container-fluid {
+  max-width: 1920px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 40px;
 }
 
 // style
@@ -99,4 +107,20 @@ body {
 
 .burger--active span {
   transform: scale(0);
+}
+
+// global style
+.btn {
+  display: inline-block;
+  min-height: 75px;
+  padding: 25px 60px;
+  background: #f8c541;
+  border-radius: 47px;
+  transition: all 0.3s;
+
+  @extend %kumbh-700;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #02081e;
 }

@@ -1,0 +1,101 @@
+.top {
+  position: relative;
+  margin-top: 100px;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title {
+    margin-bottom: 42px;
+    width: 100%;
+    max-width: 570px;
+    @extend %kumbh-300;
+    font-size: 48px;
+    text-align: center;
+    color: #fff;
+  }
+  &__title a {
+    @extend %kumbh-700;
+    color: #f8c541;
+  }
+  &__items {
+    display: flex;
+    gap: 0 20px;
+  }
+  &__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    width: 100%;
+    max-width: 952px;
+  }
+}
+
+.top-features {
+  width: 100%;
+  max-width: 264px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__icon {
+    margin-bottom: 20px;
+    width: 60px;
+    height: 60px;
+  }
+  &__text {
+    @extend %kumbh-300;
+    font-size: 20px;
+    text-align: center;
+    color: #999ca5;
+    padding: 0 20px;
+  }
+  &__text span {
+    @extend %kumbh-700;
+  }
+}
+
+.top-text {
+  margin-top: 10px;
+  width: 100%;
+  max-width: 527px;
+  @extend %kumbh-300;
+  font-size: 20px;
+  text-align: center;
+  color: #999ca5;
+  display: flex;
+  flex-direction: column;
+  gap: 25px 0;
+}
+
+.top-text span {
+  @extend %kumbh-700;
+}
+
+.top-slider {
+  width: 100%;
+  max-width: 1920px;
+}
+
+.top-slider .swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.top-slider .swiper-pagination {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  position: static;
+}
+
+.top-slider .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #171a2c;
+  opacity: 1;
+}
+
+.top-slider .swiper-pagination-bullet-active {
+  background: #f8c541;
+}
