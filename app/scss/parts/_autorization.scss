@@ -39,7 +39,7 @@
     color: #fff;
   }
   input {
-    margin-top: 6px;
+    margin-top: 10px;
     display: block;
     width: 100%;
     padding: 22px 30px;
@@ -68,7 +68,66 @@
     color: #fff;
   }
   &__link {
+    margin-left: 5px;
     color: #f8c541;
+  }
+}
+
+.password-length {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #999ca5;
+  &__title {
+    @extend %kumbh-700;
+  }
+  &__text {
+    margin-bottom: 10px;
+  }
+  &__items {
+    display: flex;
+    gap: 0 15px;
+  }
+  &__items span {
+    flex-basis: 20%;
+    height: 2px;
+    background: #33394d;
+  }
+  &__items span.active {
+    background: #10b981;
+  }
+}
+
+.form-conditions {
+  margin-bottom: 20px;
+  display: flex;
+  input[type="checkbox"] {
+    @extend %checkbox-hidden;
+  }
+  label {
+    cursor: pointer;
+  }
+  &__check {
+    margin-right: 20px;
+  }
+  &__text {
+    @extend %kumbh-400;
+    font-size: 12px;
+    color: #999ca5;
+  }
+  &__checkbox {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #33394d;
+    border-radius: 10px;
+  }
+
+  .form-conditions__check label input:checked + .form-conditions__checkbox > svg {
+    display: none;
   }
 }
 
@@ -92,10 +151,30 @@
   .form-auth__btns {
     gap: 15px 0;
   }
+
+  .password-length {
+    font-size: 10px;
+  }
+
+  .password-length__text {
+    margin-bottom: 18px;
+  }
+  .password-length__items {
+    gap: 0 10px;
+  }
 }
 
 @media (max-width: 576px) {
   .form-auth__btns {
     margin-top: 100px;
+  }
+
+  .form-conditions {
+    margin-bottom: 30px;
+    
+}
+
+  .form-registration .form-auth__btns {
+    margin-top: 0;
   }
 }
