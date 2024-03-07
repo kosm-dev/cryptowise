@@ -62,6 +62,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+  function initializeSpoilers() {
+    document.body.addEventListener('click', (event) => {
+      const spoilers = document.querySelectorAll('.spoiler');
+
+      spoilers.forEach((spoiler) => {
+        if (!spoiler.contains(event.target)) {
+          spoiler.classList.remove('active');
+        } else {
+          spoiler.classList.toggle('active');
+        }
+      });
+    });
+  }
+
+
+  if (document.querySelector('.spoiler')) {
+    initializeSpoilers();
+  }
+
+  
+
+
+
+
+
+
+
+
+
+
+
 
 
 
