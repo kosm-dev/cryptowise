@@ -1,0 +1,48 @@
+.dashboard {
+  &__inner {
+    width: 100%;
+    max-width: 710px;
+  }
+  &__items {
+    margin-top: 44px;
+    margin-bottom: 13px;
+  }
+  &__profits {
+    display: flex;
+    gap: 0 20px;
+  }
+  &__elements {
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+  }
+}
+.dashboard-item {
+  width: 100%;
+  max-width: 710px;
+  background: linear-gradient(135deg, #060d25 0%, #0f162e 100%);
+  display: flex;
+  justify-content: space-between;
+  gap: 0 20px;
+  padding: 22px 30px 22px 50px;
+
+  border-radius: 10px;
+  &__content {
+    display: flex;
+    align-items: center;
+  }
+  &__icon {
+    margin-right: 20px;
+  }
+  &__icon img {
+    width: 38px;
+  }
+  &__title {
+    width: 100%;
+    max-width: 180px;
+
+    @extend %kumbh-400;
+    font-size: 16px;
+    color: #fff;
+  }
+}

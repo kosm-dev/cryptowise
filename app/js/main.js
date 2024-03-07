@@ -23,8 +23,23 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
+  function toggleTooltip(element) {
+    let tooltips = document.querySelectorAll(element);
 
+    document.addEventListener('click', (event) => {
+      tooltips.forEach((tooltip) => {
+        if (tooltip.contains(event.target)) {
+          tooltip.classList.toggle('active');
+        } else {
+          tooltip.classList.remove('active');
+        }
+      });
+    });
+  }
 
+  if (document.querySelector('.tooltip')) {
+    toggleTooltip('.tooltip');
+  }
 
 
 
