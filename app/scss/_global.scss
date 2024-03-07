@@ -68,8 +68,14 @@ body {
   text-transform: uppercase;
   text-align: center;
   color: #02081e;
-  border: 0;
+  border: 1px solid #f8c541;
   cursor: pointer;
+}
+
+.btn:hover {
+  background: #060d25;
+  color: #fff;
+  border: 1px solid #6e748b;
 }
 
 .btn--special {
@@ -99,6 +105,12 @@ body {
   background: linear-gradient(135deg, #060d25 0%, #0f162e 100%);
 }
 
+.panel-title {
+  @extend %kumbh-300;
+  font-size: 30px;
+  color: #fff;
+}
+
 // panel style
 
 .wrap__inner {
@@ -125,53 +137,12 @@ body {
   padding-right: 60px;
 }
 
-.menu-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px 0;
-  &__link {
-    display: flex;
-    align-items: center;
-    padding: 14px 20px 14px;
-    border-radius: 10px;
-    background: linear-gradient(135deg, #060d25 0%, #0f162e 100%);
-    @extend %kumbh-400;
-    font-size: 12px;
-    text-transform: uppercase;
-    color: #6e748b;
-    transition: all 0.3s;
-  }
-  &__icon {
-    margin-right: 10px;
-  }
-
-  &__icon svg path {
-    transition: all 0.3s;
-  }
-
-  &__link:hover {
-    @extend %kumbh-700;
-    color: #f8c541;
-    background: linear-gradient(135deg, #060d25 0%, #35322e 100%);
-  }
-  &__link:hover svg path {
-    fill: #f8c541;
-  }
-
-  &__link--active {
-    @extend %kumbh-700;
-    color: #f8c541;
-    background: linear-gradient(135deg, #060d25 0%, #35322e 100%);
-    svg path {
-      fill: #f8c541;
-    }
-  }
-}
-
 .information {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 0 30px;
+
   padding: 12px 10px 12px 20px;
 
   @extend %kumbh-700;
@@ -305,10 +276,6 @@ body {
     left: 0;
   }
 
-  .menu {
-    margin: 30px 0;
-  }
-
   .navigation-footer {
     display: flex;
     flex-direction: column;
@@ -343,6 +310,10 @@ body {
   }
   .navigation-footer__item:last-child .navigation-footer__link:after {
     display: none;
+  }
+
+  .panel-title {
+    font-size: 20px;
   }
 }
 @media (max-width: 768px) {
@@ -407,15 +378,6 @@ body {
   .profit-item__icon svg {
     width: 10px;
   }
-
-  // .tooltip__content {
-  //   transform: translateX(-50%);
-  //   left: -40px;
-  // }
-
-  // .profit-item:nth-child(even) .tooltip__content {
-  //   right: -40px;
-  // }
 }
 
 @media (max-width: 420px) {
