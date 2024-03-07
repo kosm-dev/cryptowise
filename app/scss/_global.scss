@@ -52,62 +52,6 @@ body {
   padding: 0 40px;
 }
 
-// style
-
-// burger
-.burger {
-  position: relative;
-  display: none;
-  width: 30px;
-  height: 20px;
-  cursor: pointer;
-  // z-index: 11;
-}
-
-.burger::before,
-.burger::after {
-  content: "";
-  background: linear-gradient(90deg, #ec656d 0%, #ef914f 100%);
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  left: 0;
-  transition: all 0.3s;
-}
-
-.burger::before {
-  top: 0;
-}
-
-.burger::after {
-  bottom: 0;
-}
-
-.burger span {
-  display: block;
-  position: absolute;
-  background: linear-gradient(90deg, #ec656d 0%, #ef914f 100%);
-  top: 9px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  transition: all 0.3s;
-}
-
-.burger--active::before {
-  transform: rotate(45deg);
-  top: 9px;
-}
-
-.burger--active::after {
-  transform: rotate(-45deg);
-  bottom: 9px;
-}
-
-.burger--active span {
-  transform: scale(0);
-}
-
 // global style
 .btn {
   display: inline-flex;
@@ -134,6 +78,27 @@ body {
   color: #f8c541;
 }
 
+.panel-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 57px;
+  min-width: 269px;
+  padding: 20px 40px;
+
+  border: 1px solid #6e748b;
+  border-radius: 47px;
+
+  @extend %kumbh-400;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #6e748b;
+  cursor: pointer;
+
+  background: linear-gradient(135deg, #060d25 0%, #0f162e 100%);
+}
+
 // panel style
 
 .wrap__inner {
@@ -147,14 +112,19 @@ body {
   margin-right: 20px;
 }
 
+.navigation-logo {
+  display: none;
+}
+.navigation-footer {
+  display: none;
+}
+
 .content {
   width: 100%;
   padding-left: 60px;
   padding-right: 60px;
 }
 
-.menu {
-}
 .menu-list {
   display: flex;
   flex-direction: column;
@@ -207,8 +177,6 @@ body {
   &__icon {
     margin-right: 10px;
   }
-  &__text {
-  }
   &__btn {
     display: inline-flex;
     justify-content: center;
@@ -220,18 +188,6 @@ body {
     padding: 5px 15px;
     background: #f8c541;
     border-radius: 40px;
-  }
-}
-
-.profit-item {
-  &__icon {
-  }
-  &__value {
-    @extend %kumbh-200;
-    font-size: 48px;
-    text-transform: uppercase;
-    text-align: center;
-    color: #10b981;
   }
 }
 
@@ -296,32 +252,92 @@ body {
   }
 }
 
-.panel-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 57px;
-  min-width: 269px;
-  padding: 20px 40px;
+@media (max-width: 992px) {
+  .navigation {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: all 0.2s;
+    width: 100%;
+    height: 100%;
+    background-color: #02081e;
+    margin-right: 0;
+    padding: 195px 40px 20px;
+    overflow-y: auto;
+  }
 
-  border: 1px solid #6e748b;
-  border-radius: 47px;
+  .navigation-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
 
-  @extend %kumbh-400;
-  font-size: 14px;
-  text-transform: uppercase;
-  text-align: center;
-  color: #6e748b;
-  cursor: pointer;
+  .navigation-logo img {
+    width: 59px;
+  }
 
-  background: linear-gradient(135deg, #060d25 0%, #0f162e 100%);
+  .navigation.active {
+    left: 0;
+  }
+
+  .menu {
+    margin: 30px 0;
+  }
+
+  .navigation-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 300;
+    font-size: 12px;
+    text-align: center;
+    color: #999ca5;
+  }
+
+  .navigation-footer__list {
+    margin-bottom: 10px;
+    display: flex;
+    gap: 0 15px;
+  }
+
+  .navigation-footer__link {
+    position: relative;
+    padding-right: 15px;
+    color: inherit;
+  }
+
+  .navigation-footer__link:after {
+    content: "|";
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .navigation-footer__item:last-child .navigation-footer__link {
+    padding-right: 0;
+  }
+  .navigation-footer__item:last-child .navigation-footer__link:after {
+    display: none;
+  }
 }
-
 @media (max-width: 768px) {
   .btn {
     min-height: 50px;
     padding: 15px 60px;
     font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navigation-footer {
+    font-size: 8px;
+  }
+
+  .navigation-footer__link {
+    padding-right: 10px;
+  }
+  .navigation-footer__list {
+    gap: 0 10px;
   }
 }
 

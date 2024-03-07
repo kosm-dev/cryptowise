@@ -41,6 +41,22 @@ document.addEventListener("DOMContentLoaded", () => {
     toggleTooltip('.tooltip');
   }
 
+  function mobileMenu(btn) {
+    let hamburger = document.querySelector(btn),
+      headerInner = document.querySelector('.header__inner'),
+      navigation = document.querySelector('.navigation');
+
+    hamburger.addEventListener('click', () => {
+      headerInner.classList.toggle('active');
+      navigation.classList.toggle('active');
+      document.querySelector('body').classList.toggle('lock');
+    });
+  }
+
+  if (document.querySelector('.hamburger')) {
+    mobileMenu('.hamburger');
+  }
+
 
 
 

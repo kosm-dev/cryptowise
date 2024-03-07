@@ -1,8 +1,10 @@
 .header {
-  padding-top: 55px;
-  padding-bottom: 38px;
+  position: relative;
+  z-index: 5;
   background: #060d25;
   &__inner {
+    padding-top: 55px;
+    padding-bottom: 38px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,8 +24,6 @@
   font-size: 14px;
   text-transform: uppercase;
   color: #fff;
-  &__title {
-  }
   &__value {
     display: flex;
     align-items: center;
@@ -32,8 +32,6 @@
     margin-left: 10px;
     margin-right: 10px;
     color: #10b981;
-  }
-  &__icon {
   }
 }
 .activity-user {
@@ -54,5 +52,69 @@
     margin-left: 8px;
     @extend %kumbh-700;
     color: #fff;
+  }
+}
+
+.panel-logo img {
+  width: 90px;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 1400px) {
+  .header__inner {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .header__inner {
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
+  .panel-logo img {
+    width: 55px;
+  }
+  .activity {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+
+  .header__inner {
+    flex-wrap: wrap;
+  }
+  .header__inner.active {
+    height: 195px;
+    justify-content: flex-end;
+  }
+
+  .header__inner.active .activity {
+    display: flex;
+    flex-basis: 100%;
+  }
+
+  .header__inner.active .panel-logo {
+    display: none;
+  }
+
+  .menu-list__link {
+    padding: 15px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .activity {
+    flex-direction: column;
+    gap: 20px 0;
+  }
+
+  .activity-user {
+    order: -1;
   }
 }
