@@ -38,12 +38,12 @@ body {
   flex: 0 0 auto;
 }
 
-// .container {
-//   max-width: 1180px;
-//   width: 100%;
-//   margin: 0 auto;
-//   padding: 0 15px;
-// }
+.container {
+  max-width: 1725px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
 .container-fluid {
   max-width: 1920px;
@@ -133,6 +133,11 @@ body {
   background: #0f1428;
   color: #f8c541;
 }
+
+// panel style
+
+
+
 
 @media (max-width: 768px) {
   .btn {

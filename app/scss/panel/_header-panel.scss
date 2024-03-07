@@ -1,0 +1,56 @@
+.header {
+  padding-top: 55px;
+  padding-bottom: 38px;
+  background: #060d25;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.activity {
+  display: flex;
+  gap: 0 50px;
+}
+.activity-status {
+  display: flex;
+  align-items: center;
+  @extend %kumbh-400;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  &__title {
+  }
+  &__value {
+    display: flex;
+    align-items: center;
+  }
+  &__value span {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #10b981;
+  }
+  &__icon {
+  }
+}
+.activity-user {
+  display: flex;
+  align-items: center;
+  @extend %kumbh-400;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #7b7b7b;
+  &__icon {
+    margin-right: 10px;
+  }
+
+  &__icon img {
+    width: 38px;
+  }
+  &__text span {
+    margin-left: 8px;
+    @extend %kumbh-700;
+    color: #fff;
+  }
+}
