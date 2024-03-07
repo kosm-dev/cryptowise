@@ -157,6 +157,15 @@ body {
   &__link:hover svg path {
     fill: #f8c541;
   }
+
+  &__link--active {
+    @extend %kumbh-700;
+    color: #f8c541;
+    background: linear-gradient(135deg, #060d25 0%, #35322e 100%);
+    svg path {
+      fill: #f8c541;
+    }
+  }
 }
 
 .information {
@@ -421,8 +430,6 @@ body {
   .tooltip__content--special {
     left: -95px;
   }
-
-  
 }
 
 @media (max-width: 350px) {
