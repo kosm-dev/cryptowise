@@ -179,6 +179,7 @@ body {
     display: flex;
     align-items: center;
   }
+
   &__title {
     margin-right: 10px;
     @extend %kumbh-700;
@@ -203,6 +204,11 @@ body {
     text-transform: uppercase;
     text-align: center;
     color: #10b981;
+  }
+
+  &__subtext {
+    margin-bottom: 10px;
+    font-size: 18px;
   }
 }
 
@@ -343,6 +349,10 @@ body {
     color: #999ca5;
   }
 
+  .profit-item__subtext {
+    font-size: 14px;
+  }
+
   .profit-item__value {
     font-size: 30px;
   }
@@ -382,6 +392,9 @@ body {
 
 @media (max-width: 420px) {
   .profit-item__title {
+    font-size: 10px;
+  }
+  .profit-item__subtext {
     font-size: 10px;
   }
 
