@@ -8,8 +8,9 @@
     margin-bottom: 13px;
   }
   &__profits {
-    display: flex;
-    gap: 0 20px;
+    display: grid;
+    grid-template-columns: minmax(150px, 345px) minmax(150px, 345px);
+    gap: 20px;
   }
   &__elements {
     display: flex;
@@ -70,5 +71,12 @@
     max-width: 120px;
     font-size: 12px;
     color: #fff;
+  }
+}
+
+@media (max-width: 350px) {
+  .dashboard__profits {
+    grid-template-columns: minmax(135px, 345px) minmax(135px, 345px);
+    gap: 10px;
   }
 }

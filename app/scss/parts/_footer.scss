@@ -1,6 +1,7 @@
 .footer {
   margin-top: 50px;
   margin-bottom: 50px;
+  background: #02081e;
   &__inner {
     display: flex;
     flex-direction: column;
@@ -37,7 +38,7 @@
   .footer {
     margin-top: 20px;
     margin-bottom: 20px;
-}
+  }
   .footer__inner {
     font-size: 8px;
   }

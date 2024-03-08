@@ -82,6 +82,15 @@ body {
   font-weight: 400;
   background: #0f1428;
   color: #f8c541;
+  border: 0;
+  transition: all 0.2s;
+}
+
+.btn--special:hover {
+  background: #f8c541;
+  color: #02081e;
+  border: 0;
+  font-weight: 700;
 }
 
 .panel-btn {
@@ -103,6 +112,13 @@ body {
   cursor: pointer;
 
   background: linear-gradient(135deg, #060d25 0%, #0f162e 100%);
+  transition: all 0.2s;
+}
+
+.panel-btn:hover {
+  background: #f8c541;
+  color: #fff;
+  border: 1px solid #f8c541;
 }
 
 .panel-title {
@@ -168,6 +184,12 @@ body {
     padding: 5px 15px;
     background: #f8c541;
     border-radius: 40px;
+    transition: all .2s;
+  }
+
+  &__btn:hover {
+    background: #060D25;
+    color: #fff;
   }
 }
 
