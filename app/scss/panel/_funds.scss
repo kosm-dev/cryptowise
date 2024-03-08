@@ -17,9 +17,6 @@
 .funds-item {
   display: flex;
   flex-direction: column;
-
-  width: 100%;
-  max-width: 487px;
   font-size: 18px;
   color: #999ca5;
 
@@ -31,20 +28,25 @@
     @extend %kumbh-400;
     opacity: 0.5;
   }
-  &__area {
+  &__value {
     margin-top: 15px;
     margin-bottom: 20px;
-    background: linear-gradient(135deg, #060d25 0%, #0f162e 100%);
-    padding: 45px;
-    border-radius: 10px;
-  }
-  &__value {
+    width: 100%;
+    max-width: 487px;
     @extend %kumbh-200;
     font-family: var(--font-family);
     font-weight: 200;
     font-size: 48px;
     text-transform: uppercase;
     text-align: center;
+    color: #fff;
+    padding: 45px;
+
+    background: linear-gradient(135deg, #060d25 0%, #0f162e 100%);
+    border: 0;
+    border-radius: 10px;
+  }
+  &__value::placeholder {
     color: #fff;
   }
 }
@@ -60,9 +62,11 @@
     font-size: 14px;
   }
 
-  .funds-item__area {
+  .funds-item__value {
     margin-top: 20px;
     padding: 30px;
+    font-size: 30px;
+    padding: 31px;
   }
 
   .funds__btn {
@@ -70,9 +74,6 @@
     padding: 15px 20px;
   }
 
-  .funds-item__value {
-    font-size: 30px;
-  }
 }
 
 @media (max-width: 576px) {
