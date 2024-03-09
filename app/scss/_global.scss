@@ -238,6 +238,20 @@ body {
   color: #fff;
 }
 
+
+.profit-item.profit-item--down {
+  .profit-item__icon svg {
+    transform: rotate(-180deg);
+  }
+  .profit-item__icon svg path {
+    stroke: red;
+  }
+
+  .profit-item__value {
+    color: red;
+}
+}
+
 .tooltip {
   position: relative;
   cursor: pointer;

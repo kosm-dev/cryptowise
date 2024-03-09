@@ -34,6 +34,17 @@
     color: #10b981;
   }
 }
+
+.activity-status.activity-status--inactive {
+  .activity-status__value span {
+    color: #999CA5;
+  }
+
+  .activity-status__icon svg circle {
+    fill: #999CA5;
+  }
+}
+
 .activity-user {
   display: flex;
   align-items: center;
@@ -199,4 +210,3 @@
     gap: 5px;
   }
 }
-

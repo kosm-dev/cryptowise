@@ -59,6 +59,17 @@
   }
 }
 
+
+.livetrades-table__item.livetrades-table__item--down {
+  .livetrades-table__icon svg circle {
+    fill: red;
+  }
+
+  .livetrades-table__value span {
+    color: red;
+  }
+}
+
 @media (max-width: 992px) {
   .livetrades {
     margin-top: 20px;
