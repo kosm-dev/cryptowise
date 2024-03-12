@@ -1,0 +1,54 @@
+.funds-withdraw {
+  margin-top: 50px;
+  &__title {
+    margin-bottom: 41px;
+  }
+  &__items {
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: end;
+    gap: 13px 100px;
+  }
+  &__btns {
+    width: 100%;
+    max-width: 1075px;
+    display: flex;
+    justify-content: center;
+  }
+  &__btn.btn {
+    min-height: 53px;
+    padding: 14px 75px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .funds-withdraw__items {
+    gap: 13px 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  .funds-withdraw {
+    margin-top: 20px;
+  }
+
+  .funds-withdraw__title {
+    margin-bottom: 15px;
+  }
+  .funds-withdraw__items {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 13px;
+  }
+
+  .funds-withdraw__items {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .funds-withdraw__btn.btn {
+    flex-basis: 100%;
+    padding: 15px 30px;
+  }
+}

@@ -1,6 +1,6 @@
 .funds {
   margin-top: 50px;
-  
+
   &__title {
     margin-bottom: 41px;
   }
@@ -26,6 +26,9 @@
   max-width: 487px;
   display: flex;
   flex-direction: column;
+  &--inactive .funds-item__value {
+    color: #747272;
+  }
   &__title {
     @extend %kumbh-700;
     text-transform: uppercase;
@@ -120,16 +123,6 @@
   .funds-item__text {
     font-size: 14px;
   }
-}
-
-@media (max-width: 768px) {
-  .funds-form {
-    max-width: none;
-  }
-
-  .funds-item {
-    max-width: none;
-  }
 
   .funds-item__value {
     margin-top: 13px;
@@ -141,7 +134,7 @@
     max-width: 33px;
   }
 
-  .funds-item__value--copy .funds-item__value-box  {
+  .funds-item__value--copy .funds-item__value-box {
     justify-content: center;
   }
 
@@ -149,7 +142,16 @@
     max-width: 29px;
     margin-left: auto;
   }
-  .funds-item__value--copy span{
+  .funds-item__value--copy span {
     margin-left: auto;
   }
+
+  .funds-form {
+    max-width: none;
+  }
+
+  .funds-item {
+    max-width: none;
+  }
 }
+
