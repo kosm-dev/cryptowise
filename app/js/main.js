@@ -81,24 +81,6 @@ document.addEventListener("DOMContentLoaded", () => {
     initializeSpoilers();
   }
 
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

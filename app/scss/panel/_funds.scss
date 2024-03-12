@@ -26,7 +26,7 @@
   max-width: 487px;
   display: flex;
   flex-direction: column;
-  &--inactive .funds-item__value {
+  &--inactive .funds-item__value::placeholder {
     color: #747272;
   }
   &__title {
@@ -41,6 +41,8 @@
     opacity: 0.5;
   }
   &__value {
+    width: 100%;
+    display: block;
     margin-top: 13px;
     padding: 10px 26px;
     @extend %kumbh-200;
