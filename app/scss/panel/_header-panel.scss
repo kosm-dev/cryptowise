@@ -37,11 +37,11 @@
 
 .activity-status.activity-status--inactive {
   .activity-status__value span {
-    color: #999CA5;
+    color: #999ca5;
   }
 
   .activity-status__icon svg circle {
-    fill: #999CA5;
+    fill: #999ca5;
   }
 }
 
@@ -111,6 +111,7 @@
     color: #f8c541;
     background: linear-gradient(135deg, #060d25 0%, #35322e 100%);
   }
+
   &__link:hover svg path {
     fill: #f8c541;
   }
@@ -122,6 +123,10 @@
     svg path {
       fill: #f8c541;
     }
+  }
+  &__link--logout:hover {
+    color: #fff;
+    background: linear-gradient(135deg, #060d25 0%, #3e0909 100%);
   }
 }
 
