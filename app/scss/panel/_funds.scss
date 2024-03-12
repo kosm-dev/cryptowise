@@ -1,53 +1,105 @@
 .funds {
   margin-top: 50px;
-  &__inner {
-    width: 100%;
-    max-width: 487px;
-  }
+  
   &__title {
     margin-bottom: 41px;
   }
-  &__btn {
+  &__box {
     display: flex;
-    padding: 20px;
-    min-height: 65px;
+    justify-content: space-between;
+    gap: 0 50px;
+  }
+  &__qr {
+    margin-right: 70px;
   }
 }
 
-.funds-item {
+.funds-form {
+  width: 100%;
+  max-width: 487px;
   display: flex;
   flex-direction: column;
-  font-size: 18px;
-  color: #999ca5;
-
+  gap: 13px 0;
+}
+.funds-item {
+  width: 100%;
+  max-width: 487px;
+  display: flex;
+  flex-direction: column;
   &__title {
     @extend %kumbh-700;
     text-transform: uppercase;
+    color: #999ca5;
   }
   &__text {
+    width: 100%;
+    max-width: 470px;
     @extend %kumbh-400;
     opacity: 0.5;
   }
   &__value {
-    margin-top: 15px;
-    margin-bottom: 20px;
-    width: 100%;
-    max-width: 487px;
+    margin-top: 13px;
+    padding: 10px 26px;
     @extend %kumbh-200;
-    font-family: var(--font-family);
-    font-weight: 200;
     font-size: 48px;
     text-transform: uppercase;
     text-align: center;
     color: #fff;
-    padding: 45px;
-
     background: linear-gradient(135deg, #060d25 0%, #0f162e 100%);
     border: 0;
     border-radius: 10px;
   }
   &__value::placeholder {
     color: #fff;
+  }
+  &__value-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__value--copy .funds-item__value-box {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__value--copy .funds-item__value-icon {
+    margin-left: 46px;
+    order: 2;
+    cursor: pointer;
+  }
+}
+.funds-qr {
+  width: 100%;
+  max-width: 487px;
+  &__title {
+    @extend %kumbh-700;
+    text-transform: uppercase;
+    color: #999ca5;
+  }
+  &__text {
+    width: 100%;
+    max-width: 470px;
+    @extend %kumbh-400;
+    opacity: 0.5;
+  }
+  &__code {
+    margin-top: 25px;
+    width: 100%;
+    max-width: 354px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .funds__qr {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .funds__box {
+    flex-direction: column;
+    gap: 30px;
   }
 }
 
@@ -58,29 +110,46 @@
   .funds__title {
     margin-bottom: 15px;
   }
-  .funds-item {
+  .funds-qr {
+    display: none;
+  }
+
+  .funds-item__title {
     font-size: 14px;
+  }
+  .funds-item__text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .funds-form {
+    max-width: none;
+  }
+
+  .funds-item {
+    max-width: none;
   }
 
   .funds-item__value {
-    margin-top: 20px;
-    padding: 30px;
+    margin-top: 13px;
+    padding: 16px 19px;
     font-size: 30px;
-    padding: 31px;
   }
 
-  .funds__btn {
-    min-height: 50px;
-    padding: 15px 20px;
+  .funds-item__value-icon {
+    max-width: 33px;
   }
 
-}
-
-@media (max-width: 576px) {
-  .funds__inner {
-    max-width: none;
+  .funds-item__value--copy .funds-item__value-box  {
+    justify-content: center;
   }
-  .funds-item {
-    max-width: none;
+
+  .funds-item__value--copy .funds-item__value-icon {
+    max-width: 29px;
+    margin-left: auto;
+  }
+  .funds-item__value--copy span{
+    margin-left: auto;
   }
 }
