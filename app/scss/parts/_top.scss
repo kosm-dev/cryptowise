@@ -41,10 +41,10 @@
   align-items: center;
   &__icon {
     margin-bottom: 20px;
+    flex-shrink: 0;
+    flex-basis: 60px;
   }
-  &__icon img {
-    width: 60px;
-  }
+  
   &__text {
     @extend %kumbh-300;
     font-size: 20px;
@@ -144,10 +144,7 @@
   .top-features__icon {
     margin-bottom: 0;
     margin-right: 15px;
-  }
-
-  .top-features__icon img {
-    width: 40px;
+    flex-basis: 40px;
   }
 
   .top-features__text {
