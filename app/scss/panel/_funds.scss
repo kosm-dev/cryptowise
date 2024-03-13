@@ -63,6 +63,16 @@
     justify-content: center;
   }
 
+  &__value--copy .funds-item__value-icon {
+    cursor: pointer;
+    transition: all .2s;
+
+  }
+
+  &__value--copy .funds-item__value-icon:active {
+    transform: scale(0.8);
+  }
+
   &__value--copy .funds-item__value-box {
     display: flex;
     justify-content: flex-end;
@@ -71,7 +81,6 @@
   &__value--copy .funds-item__value-icon {
     margin-left: 46px;
     order: 2;
-    cursor: pointer;
   }
 }
 .funds-qr {
@@ -111,6 +120,7 @@
 @media (max-width: 992px) {
   .funds {
     margin-top: 20px;
+    margin-bottom: 126px;
   }
   .funds__title {
     margin-bottom: 15px;
@@ -156,4 +166,3 @@
     max-width: none;
   }
 }
-

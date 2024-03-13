@@ -82,8 +82,29 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
+  // document.querySelector("#copyButton").addEventListener("click", function () {
+  //   navigator.clipboard.writeText(document.querySelector("#textToCopy").innerText).then(function () {
+  //     console.log('Text copied to clipboard');
+  //   }).catch(function (error) {
+  //     console.error('Error:', error);
+  //   });
+  // });
 
 
+
+  document.querySelector("#copyButton").addEventListener("click", function () {
+    var textToCopy = document.querySelector("#textToCopy").innerText;
+
+    var input = document.createElement('input');
+    input.setAttribute('value', textToCopy);
+    document.body.appendChild(input);
+
+    input.select();
+    document.execCommand('copy');
+    document.body.removeChild(input);
+
+    console.log('Text copied to clipboard');
+  });
 
 
 
