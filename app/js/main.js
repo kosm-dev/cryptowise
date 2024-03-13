@@ -91,20 +91,22 @@ document.addEventListener("DOMContentLoaded", () => {
   // });
 
 
+  if (document.querySelector("#copyButton")) {
+    document.querySelector("#copyButton").addEventListener("click", function () {
+      var textToCopy = document.querySelector("#textToCopy").innerText;
 
-  document.querySelector("#copyButton").addEventListener("click", function () {
-    var textToCopy = document.querySelector("#textToCopy").innerText;
+      var input = document.createElement('input');
+      input.setAttribute('value', textToCopy);
+      document.body.appendChild(input);
 
-    var input = document.createElement('input');
-    input.setAttribute('value', textToCopy);
-    document.body.appendChild(input);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
 
-    input.select();
-    document.execCommand('copy');
-    document.body.removeChild(input);
+      console.log('Text copied to clipboard');
+    });
+  }
 
-    console.log('Text copied to clipboard');
-  });
 
 
 
