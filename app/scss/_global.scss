@@ -100,25 +100,21 @@ body {
   min-height: 57px;
   min-width: 269px;
   padding: 20px 40px;
-
-  border: 1px solid #6e748b;
   border-radius: 47px;
 
-  @extend %kumbh-400;
+  @extend %kumbh-700;
   font-size: 14px;
   text-transform: uppercase;
   text-align: center;
-  color: #6e748b;
   cursor: pointer;
-
-  background: linear-gradient(135deg, #060d25 0%, #0f162e 100%);
+  color: #02081e;
+  background: #f8c541;
   transition: all 0.2s;
 }
 
 .panel-btn:hover {
-  background: #f8c541;
+  background: #060d25;
   color: #fff;
-  border: 1px solid #f8c541;
 }
 
 .panel-title {
@@ -454,7 +450,6 @@ body {
 
 @media (max-width: 360px) {
   .panel-btn {
-   
     font-size: 9px;
   }
 }
