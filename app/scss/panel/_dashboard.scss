@@ -44,11 +44,11 @@
     align-items: center;
   }
   &__icon {
+    flex-basis: 38px;
+    flex-shrink: 0;
     margin-right: 20px;
   }
-  &__icon img {
-    width: 38px;
-  }
+  
   &__title {
     width: 100%;
     max-width: 180px;
@@ -73,11 +73,10 @@
   }
 
   .dashboard-item__icon {
+    flex-basis: 20px;
     margin-right: 10px;
   }
-  .dashboard-item__icon img {
-    width: 20px;
-  }
+  
   .dashboard-item__title {
     max-width: 120px;
     font-size: 12px;
