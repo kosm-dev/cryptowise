@@ -55,26 +55,25 @@
     @extend %kumbh-700;
     color: #fff;
   }
-  &__value span {
+  &__value--up {
     color: #10b981;
+  }
+  &__value--down {
+    color: #F6455F
   }
 }
 
-
-.livetrades-table__item.livetrades-table__item--down {
-  .livetrades-table__icon svg circle {
-    fill: red;
+.livetrades-table__icon.livetrades-table__icon--down {
+  svg circle {
+    fill: #F6455F
   }
 
-  .livetrades-table__value span {
-    color: red;
-  }
 }
 
 @media (max-width: 992px) {
   .livetrades {
     margin-top: 20px;
-}
+  }
   .livetrades__title {
     margin-bottom: 10px;
   }

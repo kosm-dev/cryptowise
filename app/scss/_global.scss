@@ -184,11 +184,11 @@ body {
     padding: 5px 15px;
     background: #f8c541;
     border-radius: 40px;
-    transition: all .2s;
+    transition: all 0.2s;
   }
 
   &__btn:hover {
-    background: #060D25;
+    background: #060d25;
     color: #fff;
   }
 }
@@ -225,7 +225,7 @@ body {
     font-size: 48px;
     text-transform: uppercase;
     text-align: center;
-    color: #10b981;
+    color: #fff;
   }
 
   &__subtext {
@@ -238,18 +238,27 @@ body {
   color: #fff;
 }
 
-
 .profit-item.profit-item--down {
   .profit-item__icon svg {
     transform: rotate(-180deg);
   }
   .profit-item__icon svg path {
-    stroke: red;
+    stroke: #f6455f;
   }
 
   .profit-item__value {
-    color: red;
+    color: #f6455f;
+  }
 }
+
+.profit-item.profit-item--up {
+  .profit-item__icon svg path {
+    stroke: #10b981;
+  }
+
+  .profit-item__value {
+    color: #10b981;
+  }
 }
 
 .tooltip {
@@ -440,6 +449,13 @@ body {
   }
   .tooltip__content--special {
     left: -95px;
+  }
+}
+
+@media (max-width: 360px) {
+  .panel-btn {
+   
+    font-size: 9px;
   }
 }
 

@@ -82,13 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
-  // document.querySelector("#copyButton").addEventListener("click", function () {
-  //   navigator.clipboard.writeText(document.querySelector("#textToCopy").innerText).then(function () {
-  //     console.log('Text copied to clipboard');
-  //   }).catch(function (error) {
-  //     console.error('Error:', error);
-  //   });
-  // });
+  
 
 
   if (document.querySelector("#copyButton")) {
